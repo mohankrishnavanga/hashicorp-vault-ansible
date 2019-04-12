@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  become: yes
+  vars:
+    consul_version: 1.4.4
+    vault_version: 1.1.0
+    consul_linux_distro: linux
+    consul_mac_distro: darwin
+    vault_linux_distro: linux
+    vault_mac_distro: darwin
+  roles:
+    - role: vault-deploy
